@@ -27,4 +27,4 @@ if read_file is not None:
 
 
         st.write("Invertion finished")
-        st.download_button("Download", json.dumps(new_file, 4), "Inverted_Profile.json", "application/json")
+        st.download_button("Download", json.dumps(new_file, indent = 4), "Inverted_Profile.json", "application/json")
