@@ -4,10 +4,25 @@ st.title("Frame Inverter")
 st.write("Upload your json file here")
 read_file = st.file_uploader("upload your json", "json", False, )
 if read_file is not None:
-    file = json.load(read_file)
+    origional_file = json.load(read_file)
     st.write("file read success")
     targets = st.multiselect("Which page you want to invert?", ["自定义界面1/custom page1", "自定义界面2/custom page2", "自定义界面3/custom page3"],None)
     
     targets = [x.split("/")[0] for x in targets]
     st.write(targets)
     
+    if st.button("Invert"):
+        new_file = origional_file.copy()
+        for target in targets:
+            for key, page in enumerate(new_file["page_data"]):
+                if page["//"] == target:
+                    frames = page["frames"]["frame_data"].copy()
+
+                    new_frames = []
+                    for frame in frames:
+                        new_frame = frame.copy()
+                        new_frame["frame_RGB"] = frame["frame_RGB"][::-1]
+                        new_frames.append(new_frame)
+                    new_file["page_data"][key]["frames"]["frame_data"] = new_frames
+        st.write("Invertion finished")
+        st.download_button("Download", new_file, "Inverted_Profile.json")
