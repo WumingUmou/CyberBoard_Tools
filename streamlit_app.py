@@ -5,7 +5,7 @@ st.write("Upload your json file here")
 read_file = st.file_uploader("upload your json", "json", False, )
 if read_file is not None:
     origional_file = json.load(read_file)
-    filename = read_file.name
+    filename = read_file.name.split(".")[0]
     st.write("file read success")
     targets = st.multiselect("Which page you want to invert?", ["自定义界面1/custom page1", "自定义界面2/custom page2", "自定义界面3/custom page3"],None)
     
@@ -28,7 +28,8 @@ if read_file is not None:
 
 
         st.write("Invertion finished")
-        outfile_name = st.text_input("Download File Name", value=f"Inverted_{filename.split(".")[0]}.json")
+        
+        outfile_name = st.text_input("Download File Name", value=f"Inverted_{filename}.json")
         if outfile_name.split(".")[-1]!="json":
             outfile_name+=".json"
         st.download_button("Download", json.dumps(new_file, indent = 4), outfile_name, "application/json")
