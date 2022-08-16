@@ -28,5 +28,7 @@ if read_file is not None:
 
 
         st.write("Invertion finished")
-        outfile_name = st.text_input("Download File Name", value=f"Inverted_{filename}")
+        outfile_name = st.text_input("Download File Name", value=f"Inverted_{filename.split(".")[0]}.json")
+        if outfile_name.split(".")[-1]!="json":
+            outfile_name+=".json"
         st.download_button("Download", json.dumps(new_file, indent = 4), outfile_name, "application/json")
