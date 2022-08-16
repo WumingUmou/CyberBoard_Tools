@@ -32,4 +32,4 @@ if read_file is not None:
         outfile_name = st.text_input("Download File Name", value=f"Inverted_{filename}.json")
         if outfile_name.split(".")[-1]!="json":
             outfile_name+=".json"
-        st.download_button("Download", json.dumps(new_file, indent = 4), outfile_name, "application/json")
+    st.download_button("Download", json.dumps(new_file, indent = 4), outfile_name, "application/json")
