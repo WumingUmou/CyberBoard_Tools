@@ -3,8 +3,8 @@ import json
 import pickle
 
 st.set_page_config(
-    page_title="🖥️ Solid Color",
-    page_icon="👋",
+    page_title="Solid Color",
+    page_icon="🖥️",
 )
 
 
