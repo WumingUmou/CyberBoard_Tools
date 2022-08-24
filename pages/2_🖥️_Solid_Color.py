@@ -9,7 +9,11 @@ st.set_page_config(
 
 
 st.title("Solid Color")
-st.markdown("This feature is used to make a single color fill your keyboard\nGreat thanks to @Bennster#3408 for the idea!\n\n")
+st.markdown("""
+            This feature is used to make a single color fill your keyboard
+            
+            Great thanks to @Bennster#3408 for the idea!
+            """)
 st.write("Upload your json file here")
 
 

@@ -6,7 +6,7 @@ st.set_page_config(
 )
 
 st.title("Frame Inverter")
-st.markdown("This feature is used to invert(rotate 180 degrees) anything on the LED matrix for a certain profile so that it is easier to be viewed by someone sits in front of you.\n\n")
+st.markdown("This feature is used to invert(rotate 180 degrees) anything on the LED matrix for a certain profile so that it is easier to be viewed by someone sits in front of you.")
 st.write("Upload your json file here")
 read_file = st.file_uploader("upload your json", "json", False, )
 if read_file is not None:
