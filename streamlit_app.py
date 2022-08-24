@@ -17,6 +17,6 @@ st.markdown(
     - I'm nowhere a professional programmer and this is my first open-to-public project. So if you have any ideas or thoughts, please reach out to me at @Umou#5793 in AM's discord channel.
 
     ### About the project
-    - The project is fully open-sourced and you could find all the details and source code from [Github](https://github.com/WumingUmou/CyberBoard_Tools)
+    - The project is fully open-sourced and you could find all the details and source code here from [Github](https://github.com/WumingUmou/CyberBoard_Tools)
     """
 )
