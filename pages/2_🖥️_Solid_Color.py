@@ -23,9 +23,13 @@ if read_file is not None:
     if "LED matrix" in change:
         LED_change = True
         LED_color = st.color_picker("Pick a color for your LED matrix", "#8028F5")
+    else:
+        LED_change = False
     if "key RGB" in change:
         key_change = True
         key_color = st.color_picker("Pick a color for your key RGB lighting", "#8028F5")
+    else:
+        key_change = False
     targets = [x.split("/")[0] for x in targets]
     
     with open("mask.pkl", "rb") as f:
