@@ -6,14 +6,14 @@ st.set_page_config(
 )
 
 st.title("Frame Inverter")
-st.markdown("This feature is used to invert(rotate 180 degrees) anything on the LED matrix for a certain profile so that it is easier to be viewed by someone sits in front of you.")
+st.markdown("This feature is used to invert(rotate 180 degrees) anything on the LED matrix for a certain profile so that it is easier to be viewed by someone sits in front of you.\n\n")
 st.write("Upload your json file here")
 read_file = st.file_uploader("upload your json", "json", False, )
 if read_file is not None:
     origional_file = json.load(read_file)
     filename = ".".join(read_file.name.split(".")[:-1])
     st.write("file read success")
-    targets = st.multiselect("Which page you want to invert?", ["自定义界面1/custom page1", "自定义界面2/custom page2", "自定义界面3/custom page3"],None)
+    targets = st.multiselect("Which page you want to invert?", ["自定义界面1/LIGHT 1", "自定义界面2/LIGHT 2", "自定义界面3/LIGHT 3"],None)
     
     targets = [x.split("/")[0] for x in targets]
 
