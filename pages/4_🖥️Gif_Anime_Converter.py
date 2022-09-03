@@ -8,8 +8,6 @@ import io
 
 st.title("Gif->Anime converter")
 st.markdown("""
-**THIS IS A TEST VERSION**
-
 Works best when upload a gif with transparent background. Consider using other tools like 
 https://onlinegiftools.com/create-transparent-gif
 
