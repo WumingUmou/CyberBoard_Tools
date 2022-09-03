@@ -18,5 +18,7 @@ st.markdown(
 
     ### About the project
     - The project is fully open-sourced and you could find all the details and source code here from [Github](https://github.com/WumingUmou/CyberBoard_Tools)
+    - **If this project is anything interesting for you, please consider leaving a star at the GitHub Repo.**
+    
     """
 )
